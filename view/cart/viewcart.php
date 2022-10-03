@@ -43,6 +43,7 @@
                 <div class="row mb bill">
                   <a href="index.php?act=bill"><input type="submit" value="xác nhận đặt hàng"></a>
                   <a href="index.php?act=delcart"><input type="button" value="Xóa giỏ hàng"></a>
+                  <a href="index.php?act=sanpham"><input type="button" value="Trở lại"></a>
                 </div>
             </div>
 

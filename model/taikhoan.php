@@ -1,9 +1,13 @@
 <?php
-  function insert_taikhoan($user, $pass ,$fullname, $email, $address,$phone,$role){
+function insert_taikhoan($user, $pass ,$fullname, $email, $address,$phone,$role){
     $sql="insert into taikhoan(user,pass,fullname,email,address,tel,role) values('$user', '$pass' , '$fullname' , '$email', '$address', '$phone','$role')";
     pdo_execute($sql);
 }
 
+function insert_taikhoandk($user, $pass ,$fullname, $email, $address,$phone){
+  $sql="insert into taikhoan(user,pass,fullname,email,address,tel) values('$user', '$pass' , '$fullname' , '$email', '$address', '$phone')";
+  pdo_execute($sql);
+}
 function check_user($user,$pass){
   $sql = "select * from taikhoan where user='".$user."' AND pass='".$pass."'";
   $tk = pdo_query_one($sql);

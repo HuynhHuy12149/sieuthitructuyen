@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="row titlesp mb">
-                    <span>Các sản phẩm  mới nhất</span>
+                    <span>Sản Phẩm</span>
                 </div>
                 <div class="row">
                     <?php

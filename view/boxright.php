@@ -12,7 +12,9 @@
                                     if($role==1){
                                 ?>
                                 <li><a href="admin/index.php">Đăng nhập admin</a></li>
+                                
                                 <?php } ?>
+                                <li><a href="index.php?act=addtocart">Giỏ Hàng</a></li>
                                 <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
                                 <li><a href="index.php?act=thoat">Thoát</a></li>
 

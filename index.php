@@ -59,7 +59,7 @@
                     $email = $_POST['email'];
                     $address = $_POST['address'];
                     $phone = $_POST['phone'];
-                    insert_taikhoan($user, $pass ,$fullname, $email, $address,$phone);
+                    insert_taikhoandk($user, $pass ,$fullname, $email, $address,$phone);
                     $thongbao="Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng.";
                 }
                 include "view/taikhoan/dangky.php";
