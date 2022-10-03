@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Siêu thị trực tuyến</title>
     <link rel="stylesheet" href="view/css/style.css">
 </head>
+
 <body>
     <div class="boxcenter">
         <div class="row mb header">
@@ -28,48 +30,48 @@
                         <!-- images slider start -->
                         <div class="img-slider">
                             <div class="slide active">
-                              <img src="view/images/1.jpg" alt="">
-                              <div class="info">
-                                <h2>Slide 01</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
+                                <img src="view/images/1.jpg" alt="">
+                                <div class="info">
+                                    <h2>Slide 01</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
                             </div>
                             <div class="slide">
-                              <img src="view/images/2.jpg" alt="">
-                              <div class="info">
-                                <h2>Slide 02</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
+                                <img src="view/images/2.jpg" alt="">
+                                <div class="info">
+                                    <h2>Slide 02</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
                             </div>
                             <div class="slide">
-                              <img src="view/images/3.jpg" alt="">
-                              <div class="info">
-                                <h2>Slide 03</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
+                                <img src="view/images/3.jpg" alt="">
+                                <div class="info">
+                                    <h2>Slide 03</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
                             </div>
                             <div class="slide">
-                              <img src="view/images/4.jpg" alt="">
-                              <div class="info">
-                                <h2>Slide 04</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
+                                <img src="view/images/4.jpg" alt="">
+                                <div class="info">
+                                    <h2>Slide 04</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
                             </div>
                             <div class="slide">
-                              <img src="view/images/5.jpg" alt="">
-                              <div class="info">
-                                <h2>Slide 05</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
+                                <img src="view/images/5.jpg" alt="">
+                                <div class="info">
+                                    <h2>Slide 05</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
                             </div>
                             <div class="navigation">
-                              <div class="btn active"></div>
-                              <div class="btn"></div>
-                              <div class="btn"></div>
-                              <div class="btn"></div>
-                              <div class="btn"></div>
+                                <div class="btn active"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
                             </div>
-                          </div>
+                        </div>
                         <!-- images slider edn -->
                     </div>
                 </div>
@@ -78,13 +80,13 @@
                 </div>
                 <div class="row">
                     <a href="#" class="linkchitiet">
-                    <div class="boxsp mr">
-                        <div class="row img mrt10">
-                            <img src="view/images/h8.jpg" alt="">
+                        <div class="boxsp mr">
+                            <div class="row img mrt10">
+                                <img src="view/images/h8.jpg" alt="">
+                            </div>
+                            <p>$30</p>
+                            <span>Găng Tay LS2</span>
                         </div>
-                        <p>$30</p>
-                        <span>Găng Tay LS2</span>
-                    </div>
                     </a>
                     <div class="boxsp mr">
                         <div class="row img mrt10">
@@ -258,61 +260,63 @@
         <div class="row mb footer">
             Copyright @ 2020
         </div>
-    </div>    
-    
+    </div>
+
     <script type="text/javascript">
         var slides = document.querySelectorAll('.slide');
         var btns = document.querySelectorAll('.btn');
         let currentSlide = 1;
-    
+
         // Javascript for image slider manual navigation
-        var manualNav = function(manual){
-          slides.forEach((slide) => {
-            slide.classList.remove('active');
-    
-            btns.forEach((btn) => {
-              btn.classList.remove('active');
+        var manualNav = function(manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
             });
-          });
-    
-          slides[manual].classList.add('active');
-          btns[manual].classList.add('active');
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
         }
-    
+
         btns.forEach((btn, i) => {
-          btn.addEventListener("click", () => {
-            manualNav(i);
-            currentSlide = i;
-          });
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
         });
-    
+
         // Javascript for image slider autoplay navigation
-        var repeat = function(activeClass){
-          let active = document.getElementsByClassName('active');
-          let i = 1;
-    
-          var repeater = () => {
-            setTimeout(function(){
-              [...active].forEach((activeSlide) => {
-                activeSlide.classList.remove('active');
-              });
-    
-            slides[i].classList.add('active');
-            btns[i].classList.add('active');
-            i++;
-    
-            if(slides.length == i){
-              i = 0;
-            }
-            if(i >= slides.length){
-              return;
+        var repeat = function(activeClass) {
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function() {
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    slides[i].classList.add('active');
+                    btns[i].classList.add('active');
+                    i++;
+
+                    if (slides.length == i) {
+                        i = 0;
+                    }
+                    if (i >= slides.length) {
+                        return;
+                    }
+                    repeater();
+                }, 10000);
             }
             repeater();
-          }, 10000);
-          }
-          repeater();
         }
         repeat();
-        </script>
+    </script>
 </body>
+
 </html>
+fufhuqkfhkh akjsaêf
