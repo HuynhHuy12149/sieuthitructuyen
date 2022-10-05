@@ -6,12 +6,15 @@
 
 function loadall_binhluan($idpro){
   $sql="select * from binhluan where 1";
-  if($idpro > 0)
-  $sql.=" AND idpro='".$idpro."'";
+  if($idpro > 0){
+    $sql.=" AND idpro='".$idpro."'";
+  }
+  
   $sql.=" order by idbl desc";
   $listbl = pdo_query($sql);
   return $listbl;
 }
+
 function delete_bl($id){
   $sql="delete from binhluan where idbl=".$id;
   pdo_execute($sql);

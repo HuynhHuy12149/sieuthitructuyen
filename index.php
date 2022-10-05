@@ -80,13 +80,7 @@
                 }
                 include "view/taikhoan/dangky.php";
                 break;
-            case 'usercheck':
-                if(isset($_SESSION['member'])){
-                    include "view/cart/viewcart.php";
-                }else{
-                    include "view/user/signin.php";
-                }
-                break;
+           
             case 'thaydoithongtincanhan':
                 if(isset($_POST['updateuser'])&&($_POST['updateuser'])){
                     $user = $_POST['user'];
@@ -120,7 +114,7 @@
                 break;
             case 'addtocart':
                 
-                if(isset($_SESSION['user'])){
+                if(isset($_SESSION['member'])){
                     if(isset($_POST['addtocartbtn'])&&($_POST['addtocartbtn'])){
                         $idsp = $_POST['idsp'];
                         $namesp = $_POST['namesp'];
