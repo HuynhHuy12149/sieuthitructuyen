@@ -80,6 +80,13 @@
                 }
                 include "view/taikhoan/dangky.php";
                 break;
+            case 'usercheck':
+                if(isset($_SESSION['member'])){
+                    include "view/cart/viewcart.php";
+                }else{
+                    include "view/user/signin.php";
+                }
+                break;
             case 'thaydoithongtincanhan':
                 if(isset($_POST['updateuser'])&&($_POST['updateuser'])){
                     $user = $_POST['user'];
@@ -112,19 +119,27 @@
                 include "view/taikhoan/quenmatkhau.php";
                 break;
             case 'addtocart':
-                if(isset($_POST['addtocartbtn'])&&($_POST['addtocartbtn'])){
-                    $idsp = $_POST['idsp'];
-                    $namesp = $_POST['namesp'];
-                    $img = $_POST['img'];
-                    $price = $_POST['price'];
-                    $soluong = 1;
-                    $thanhtien = $soluong * $price;
-                    $spadd = [$idsp,$namesp,$img,$price,$soluong,$thanhtien];
-                    array_push($_SESSION['mycart'],$spadd);
-                    
+                
+                if(isset($_SESSION['user'])){
+                    if(isset($_POST['addtocartbtn'])&&($_POST['addtocartbtn'])){
+                        $idsp = $_POST['idsp'];
+                        $namesp = $_POST['namesp'];
+                        $img = $_POST['img'];
+                        $price = $_POST['price'];
+                        $soluong = 1;
+                        $thanhtien = $soluong * $price;
+                        $spadd = [$idsp,$namesp,$img,$price,$soluong,$thanhtien];
+                        array_push($_SESSION['mycart'],$spadd);
+                        
+                    }
+                    include "view/cart/viewcart.php";
+                    break;
+                }else{
+                      include "view/home.php";
                 }
-                include "view/cart/viewcart.php";
                 break;
+                    
+             
             case 'delcart':
                 if(isset($_GET['idcart'])){
                     $id = $_GET['idcart'];

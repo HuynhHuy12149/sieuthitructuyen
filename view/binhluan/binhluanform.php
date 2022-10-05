@@ -2,7 +2,7 @@
   session_start();
   include "../../model/pdo.php";
   include "../../model/binhluan.php";
-
+  include "../view/home.php"
   $idpro=$_REQUEST['idpro'];
 
   $fullname = $_SESSION['member']['fullname'];
@@ -60,6 +60,7 @@
           </div>
       </div>
       <?php
+      if(isset($_SESSION['member'])){
         if(isset($_POST['guibl'])&&($_POST['guibl'])){
           $noidung = $_POST['message'];
           $idproduct = $_POST['idproduct'];
@@ -68,6 +69,12 @@
           insert_binhluan($noidung, $iduser ,$idproduct, $ngaybinhluan);
           header("location: ".$_SERVER['HTTP_REFERER']);
         }
+            
+      }else{
+            include "view/home.php";
+      }
+          
+     
       ?>
 </body>
 </html>
