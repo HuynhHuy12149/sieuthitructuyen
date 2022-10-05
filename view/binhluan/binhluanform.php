@@ -4,17 +4,17 @@
   include "../../model/binhluan.php";
 
   
-    if(isset($_SESSION['member'])){
-      $idpro=$_REQUEST['idpro'];
+  
+    $idpro=$_REQUEST['idpro'];
 
-      $fullname = $_SESSION['member']['fullname'];
-      $dsbl=loadall_binhluan($idpro);
-    }else{
-      
-    }
+    //$fullnameuser = $_SESSION['member']['fullname'];
+    $dsbl=loadall_binhluan($idpro);
+    //$dsbl=loadall_binhluannoiban($idpro);
+  
+  
     
- 
-
+  
+      
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/style.css">
+  
 </head>
 <style>
   .binhluan table{
@@ -50,9 +51,10 @@
             <?php
                 foreach ($dsbl as $bl) {
                     extract($bl);
-                    echo '<tr><td><b>● '.$iduser.'</b></.td>';
+                    echo '<tr><td><b>● '.$fullnameuser.'</b></.td>';
                     echo '<td>'.$noidung.'</td>';
-                    echo '<td>'.$ngaybinhluan.'</td></tr>';
+                    echo '<td>'.$ngaybinhluan.'</td>';
+                    
                 }
             ?>
           </ul>
@@ -61,20 +63,39 @@
           <div class="boxfooter searchbox">
             <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
               <input type="hidden" name="idproduct" value="<?=$idpro?>">
-              <input type="text" name="message" placeholder="Nhập bình luận của bạn về sản phẩm">
-              <input type="submit" name="guibl" Value="Gửi">
+              
+              <?php
+                  if(isset($_SESSION['member'])){
+              ?>
+                    <input type="text" name="message" placeholder="Nhập bình luận của bạn về sản phẩm">
+                    <input  type="submit" name="guibl" Value="Gửi">
+              <?php      
+                  }else{
+              ?>
+                    <input type="text" name="message" placeholder="Vui lòng đăng nhập để bình luận sản phẩm"  disabled>
+                    <input type="submit" name="guibl" Value="Gửi" disabled>
+              <?php      
+                  }                 
+              ?>
             </form>
           </div>
       </div>
       <?php
-        if(isset($_POST['guibl'])&&($_POST['guibl'])){
-          $noidung = $_POST['message'];
-          $idproduct = $_POST['idproduct'];
-          $iduser = $_SESSION['member']['idtk'];
-          $ngaybinhluan = date("h:i:sa d/m/Y");
-          insert_binhluan($noidung, $iduser ,$idproduct, $ngaybinhluan);
-          header("location: ".$_SERVER['HTTP_REFERER']);
+        if(isset($_SESSION['member'])){
+          if(isset($_POST['guibl'])&&($_POST['guibl'])){
+            $noidung = $_POST['message'];
+            $idproduct = $_POST['idproduct'];
+            $iduser = $_SESSION['member']['idtk'];
+            $fullnameuser = $_SESSION['member']['fullname'];
+            $ngaybinhluan = date("h:i:sa d/m/Y");
+            insert_binhluan($noidung, $iduser,$fullnameuser ,$idproduct, $ngaybinhluan);
+            header("location: ".$_SERVER['HTTP_REFERER']);
+            
+          }
+        }else{
+          return;
         }
+        
       ?>
 </body>
 </html>
