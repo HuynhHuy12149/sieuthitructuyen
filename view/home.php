@@ -79,6 +79,7 @@
                                       <input type="hidden" name="namesp" value="'.$namesp.'">
                                       <input type="hidden" name="img" value="'.$img.'">
                                       <input type="hidden" name="price" value="'.$price.'">
+                                      <input type="hidden" name="soluong" value="1">
                                       <input type="submit" name="addtocartbtn" value="Add to cart">
                                     </form>
                                   </div>
@@ -88,9 +89,23 @@
                     ?>
                 </div>
             </div>
+                    
             <div class="boxphai">
                 <?php
                     include "boxright.php";
                 ?>
             </div>
         </div>
+        <div class="pagination">
+
+              <?php
+                $count_sp = count($spnew);
+                $btn_sp =ceil( $count_sp/12);
+                $i;
+                echo '<p>Trang :  </p> ';
+                for($i =1; $i<=$btn_sp;$i++){
+                  echo '<a href="index.php?act=xemtrang&trang='.$i.'">'.$i.'</a>' ;
+
+                }
+              ?>
+          </div>

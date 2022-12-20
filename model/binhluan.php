@@ -25,4 +25,9 @@ function delete_bl($id){
   $sql="delete from binhluan where idbl=".$id;
   pdo_execute($sql);
 }
+
+function delete_blform($idbl){
+  $sql="delete from binhluan ";
+  pdo_execute($sql);
+}
 ?>

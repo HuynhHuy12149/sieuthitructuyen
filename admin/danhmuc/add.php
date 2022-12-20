@@ -3,11 +3,8 @@
                 <p>THÊM MỚI LOẠI HÀNG HÓA</p>
             </div>
             <div class="row formcontent">
-                <form action="index.php?act=addkh" method="post">
-                    <div class="row mb10">
-                        <p>Mã loại</p>
-                        <input type="text" value="auto number" name="maloai" id="" disabled>
-                    </div>
+                <form action="index.php?act=adddm" method="post">
+                    
                     <div class="row mb10">
                         <p>Tên loại</p>
                         <input type="text" name="tenloai" id="">

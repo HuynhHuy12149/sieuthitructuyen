@@ -26,11 +26,11 @@
 
             <div>
                 <i class="fa fa-phone"></i>
-                <p>+91 74**9**258</p>
+                <p>+84 794904292</p>
             </div>
             <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+                <p><a href="">huynhhuy12149@gmail.com</a></p>
             </div>
         </div>
         <div class="footer-right">

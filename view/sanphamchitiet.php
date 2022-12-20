@@ -10,14 +10,21 @@
                             $hinh = $img_path.$img;
                             echo '<div class="imgchitiet">
                                     <img src="'.$hinh.'">
+                                    
+                                    
                                 </div>
                                 <div class ="motachitiet">
                                     <span>Thông tin sản phẩm</span>
                                     <p>'.$mota.'</p>
                                 </div>';
                         ?>
+                        
+                        
+                        
                     </div>
+                    
                 </div>
+              
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                 <script>
                 $(document).ready(function(){    

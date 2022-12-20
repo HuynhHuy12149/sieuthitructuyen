@@ -4,10 +4,7 @@
             </div>
             <div class="row formcontent">
                 <form action="index.php?act=addtk" method="post">
-                    <div class="row mb10">
-                        <p>Mã Tài Khoản</p>
-                        <input type="text" value="" name="idtk" style="background-color: #EEE;" disabled>
-                    </div>
+                    
                     <div class="row mb10">
                         <p>Username</p>
                         <input type="text" value="" name="user" id="">

@@ -16,8 +16,8 @@
                                 <th>Address</th>
                                 <th>Phone</th>
                                 <th>Role</th>
-                                <th></th>
-                                
+                                <th>Xóa</th>
+                                <th>Cập nhật</th>
                             </tr>
                             <?php
                                 foreach($listtaikhoan as $taikhoan){
@@ -37,8 +37,12 @@
                                             <td>'.$tel.'</td>
                                             <td>'.$role.'</td>
                                             <td>
-                                                <a href="'.$suatk.'"><input type="button" name="" value="sửa"></a>
+                                                
                                                 <a href="'.$xoatk.'"><input type="button" name="" value="xóa"></a>
+                                            </td>
+                                            <td>
+                                                <a href="'.$suatk.'"><input type="button" name="" value="sửa"></a>
+                                               
                                             </td>
                                          </tr>';
                                 }

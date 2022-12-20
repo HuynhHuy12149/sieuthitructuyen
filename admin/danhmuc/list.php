@@ -10,7 +10,8 @@
                                 <th></th>
                                 <th>Mã loại</th>
                                 <th>Tên loại</th>
-                                <th></th>
+                                <th>Xóa</th>
+                                <th>Cập nhật</th>
                             </tr>
                             <?php
                                 foreach($listdanhmuc as $danhmuc){
@@ -24,8 +25,12 @@
                                             <td>'.$id.'</td>
                                             <td>'.$name.'</td>
                                             <td>
-                                                <a href="'.$suadm.'"><input type="button" name="" value="sửa"></a>
+                                                
                                                 <a href="'.$xoadm.'"><input type="button" name="" value="xóa"></a>
+                                            </td>
+                                            <td>
+                                                <a href="'.$suadm.'"><input type="button" name="" value="sửa"></a>
+                                                
                                             </td>
                                          </tr>';
                                 }

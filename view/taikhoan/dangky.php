@@ -30,8 +30,10 @@
                 <span class="details">Phone number</span>
                 <input type="text" name="phone" placeholder="Enter your password" required>
               </div>
+              <div class="row mb10 g-recaptcha" data-sitekey="6LcF3isjAAAAAJimApsuC7_yMbkSH9AMs-fnfbKG"></div>
+              
             </div>
-            <div class="gender-details">
+            <!-- <div class="gender-details">
               <input type="radio" name="gender" id="dot-1">
               <input type="radio" name="gender" id="dot-2">
               <input type="radio" name="gender" id="dot-3">
@@ -50,7 +52,7 @@
                 <span class="gender">Prefer not to say</span>
                 </label>
               </div>
-            </div>
+            </div> -->
             <div class="button">
               <input type="submit" name="dangky" value="Register">
             </div>

@@ -1,1 +1,6 @@
-<h1>Control panel</h1>
+
+<?php
+
+  include "../thongke/bieudo.php";
+
+?>

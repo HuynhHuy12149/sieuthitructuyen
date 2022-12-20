@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  
   include "../../model/pdo.php";
   include "../../model/binhluan.php";
 
@@ -53,7 +53,15 @@
                     extract($bl);
                     echo '<tr><td><b>● '.$fullnameuser.'</b></.td>';
                     echo '<td>'.$noidung.'</td>';
+
                     echo '<td>'.$ngaybinhluan.'</td>';
+                    
+                  
+                   
+                   
+                       
+                       
+                  
                     
                 }
             ?>
@@ -95,6 +103,23 @@
         }else{
           return;
         }
+        
+
+        if(isset($_SESSION['member'])){
+          if(isset($_GET['xoabl'])&&($_GET['xoabl'])){
+            $noidung = $_POST['message'];
+            $idproduct = $_POST['idproduct'];
+            $iduser = $_SESSION['member']['idtk'];
+            $fullnameuser = $_SESSION['member']['fullname'];
+            $ngaybinhluan = date("h:i:sa d/m/Y");
+            insert_binhluan($noidung, $iduser,$fullnameuser ,$idproduct, $ngaybinhluan);
+            header("location: ".$_SERVER['HTTP_REFERER']);
+            
+          }
+        }else{
+          return;
+        }
+
         
       ?>
 </body>

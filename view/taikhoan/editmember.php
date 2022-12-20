@@ -36,7 +36,7 @@
                 <input type="text" value="<?=$tel?>" name="phone" placeholder="Enter your password" required>
               </div>
             </div>
-            <div class="gender-details">
+            <!-- <div class="gender-details">
               <input type="radio" name="gender" id="dot-1">
               <input type="radio" name="gender" id="dot-2">
               <input type="radio" name="gender" id="dot-3">
@@ -55,7 +55,7 @@
                 <span class="gender">Prefer not to say</span>
                 </label>
               </div>
-            </div>
+            </div> -->
             <div class="button">
               <input type="hidden" name="idtk" value="<?=$idtk?>">
               <input type="submit" name="updateuser" value="Update">

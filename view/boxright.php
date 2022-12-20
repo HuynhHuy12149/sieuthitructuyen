@@ -30,6 +30,7 @@
                                 Mật khẩu <br>
                                 <input type="password" name="password" id="">
                             </div>
+                            
                             <div class="row mb10">
                                 <input type="checkbox" name="" id=""> Ghi nhớ tài khoản?
                             </div>

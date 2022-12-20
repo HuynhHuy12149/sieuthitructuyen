@@ -3,7 +3,7 @@
         extract($sp);
     }
 
-    $imgpath="../upload/".$img;
+    $imgpath="../../upload/".$img;
     if(is_file($imgpath)){
         $hinh = "<img src='".$imgpath."' height='80'>";
     }else{

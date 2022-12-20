@@ -17,13 +17,16 @@
                                 <th>Đơn giá</th>
                                 <th>Tình trạng</th>
                                 <th>Ngày đặt hàng</th>
-                                <th></th>
+                                <th>Del</th>
+                                <th>view</th>
+                                <th>Cập nhật</th>
                             </tr>   
                             <?php
                               foreach($listbill as $bill){
                                 extract($bill);
                                 $suabill = "index.php?act=suabill&id=".$idbill;
                                 $xoabill = "index.php?act=xoabill&id=".$idbill;
+                                $xem = "index.php?act=chitiet&id=".$idbill;
                                 $khachhang=$bill["bill_name"].'<br>'.$bill["bill_email"].'<br> '.$bill["bill_address"].'<br>'.$bill["bill_tel"];
                                 $countsp = loadall_cart_count($bill["idbill"]);
                                 $ttdh = get_ttdh($bill["bill_status"]);        
@@ -39,8 +42,15 @@
                                 <td>'.$ttdh.'</td>
                                 <td>'.$bill["bill_ngaydathang"].'</td>
                                 <td>
-                                <a href="'.$suabill.'"><input type="button" name="" value="sữa"></a>
+                                
                                 <a href="'.$xoabill.'"><input type="button" name="" value="xóa"></a>
+                                </td>
+                                <td>
+                                <a href="'.$xem.'"><input type="button" name="" value="Xem"></a>
+                                </td>
+                                <td>
+                                <a href="'.$suabill.'"><input type="button" name="" value="sữa"></a>
+                                
                                 </td>
                               </tr>';
                               }

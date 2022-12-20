@@ -40,6 +40,13 @@ function loadall_sanpham_home(){
     return $listsanpham;
 }
 
+function loadall_sanpham_home_trang($tung_trang,$sp_tungtrang){
+    $sp_tungtrang= 12;
+
+    $sql="select * from sanpham order by idsp desc limit $tung_trang,$sp_tungtrang  ";//where 1 tất là câu này nó đúng
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
 function loadall_sanpham_top10(){
     $sql="select * from sanpham where 1 order by luotxem desc limit 0,10";//where 1 tất là câu này nó đúng
     $listsanpham = pdo_query($sql);

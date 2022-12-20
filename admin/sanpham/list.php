@@ -25,14 +25,15 @@
                                 <th>Hình</th>
                                 <th>Giá</th>
                                 <th>Lượt Xem</th>
-                                <th></th>
+                                <th>Xóa</th>
+                                <th>Cập nhật</th>
                             </tr>
                             <?php
                                 foreach($listsanpham as $sanpham){
                                     extract($sanpham);//khi extract có thể lấy truc tiep tên cột trong sql show ra sử dụng thoải mái
                                     $suasp = "index.php?act=suasp&id=".$idsp;
                                     $xoasp = "index.php?act=xoasp&id=".$idsp;
-                                    $imgpath="../upload/".$img;
+                                    $imgpath="../../upload/".$img;
 
                                     //kiem tra duong dẫn hình có tồn tại k
                                     if(is_file($imgpath)){
@@ -50,8 +51,12 @@
                                             <td>'.$price.'</td>
                                             <td>'.$luotxem.'</td>
                                             <td>
-                                                <a href="'.$suasp.'"><input type="button" name="" value="sửa"></a>
-                                                <a href="'.$xoasp.'"><input type="button" name="" value="xóa"></a>
+                                                
+                                                <a href=""><input type="button" name="" value="xóa"></a>
+                                            </td>
+                                            <td>
+                                                <a href=""><input type="button" name="" value="sửa"></a>
+                                              
                                             </td>
                                          </tr>';
                                 }
