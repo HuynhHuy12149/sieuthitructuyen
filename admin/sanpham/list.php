@@ -52,10 +52,10 @@
                                             <td>'.$luotxem.'</td>
                                             <td>
                                                 
-                                                <a href=""><input type="button" name="" value="xóa"></a>
+                                                <a href="'.$xoasp.'"><input type="button" name="" value="xóa"></a>
                                             </td>
                                             <td>
-                                                <a href=""><input type="button" name="" value="sửa"></a>
+                                                <a href="'.$suasp.'"><input type="button" name="" value="sửa"></a>
                                               
                                             </td>
                                          </tr>';

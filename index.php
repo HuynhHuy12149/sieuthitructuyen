@@ -241,8 +241,8 @@
                     $pttt=$_POST['pttt'];
                     $ngaydathang=date('h:i:sa d/m/Y');
                     $tongdonhang = Tongdonhang();
-                    $tieude="SIEU THI TRUC TUYEN";
-                    
+                    $tieude="SIÊU THỊ TRỰC TUYẾN";
+                    // $tieude ="=?utf-8?b?".base64_encode($tieude)."?=";
                     $mail = new Mailer();
                     
                     // tạo bill

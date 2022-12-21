@@ -14,7 +14,13 @@
                                 <li><a href="admin/index.php">Đăng nhập admin</a></li>
                                 
                                 <?php } ?>
-                                <li><a href="index.php?act=addtocart">Giỏ Hàng</a></li>
+                                <?php
+                                    $dem = 0;
+                                    if(isset($_SESSION['mycart'])){
+                                        $dem = count($_SESSION['mycart']);
+                                    }
+                                ?>
+                                <li><a href="index.php?act=addtocart">Giỏ Hàng <span style="color:red;">(<?=$dem?>)</span> </a></li>
                                 <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
                                 <li><a href="index.php?act=thoat">Thoát</a></li>
 

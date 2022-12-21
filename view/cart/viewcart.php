@@ -41,11 +41,20 @@
                               </tr>';
                               $i++;
                             }
-                            echo ' <tr>
+                            if(isset($_SESSION['mycart']) && count($_SESSION['mycart'])>0){
+                              echo ' <tr>
+                             <td colspan="4">Tổng đơn hàng</td>
+                              <td colspan="1">'.$tong.'</td>
+                              <td colspan="1"><a href="index.php?act=updatecart"><input  type="submit" value="Cập Nhật Đơn Hàng" name="capnhatvohang">;</td>
+                            </tr>';
+                            } else {
+                              echo ' <tr>
                             <td colspan="4">Tổng đơn hàng</td>
                             <td colspan="1">'.$tong.'</td>
-                            <td colspan="1"><a href="index.php?act=updatecart"><input  type="submit" value="Cập Nhật Đơn Hàng" name="capnhatvohang">;</td>
-                          </tr>';
+                            <td colspan="1"><a href="index.php?act=updatecart"><input disabled type="submit" value="Cập Nhật Đơn Hàng" name="capnhatvohang"></td>
+                            </tr>';
+                            }
+                            
                           ?>
                         </table>
                         
@@ -58,8 +67,17 @@
                     
                   </form>
                     <div class="row mb bill">
-                      <a href="index.php?act=bill"><input type="submit" value="Xác nhận đặt hàng"></a>
-                      <a href="index.php?act=delcart"><input type="button" value="Xóa giỏ hàng"></a>
+                      <?php 
+                        if(isset($_SESSION['mycart']) && count($_SESSION['mycart'])>0){
+                            echo '<a href="index.php?act=bill"><input type="submit" value="Xác nhận đặt hàng"></a>
+                            <a href="index.php?act=delcart"><input type="button" value="Xóa giỏ hàng"></a>';
+                        }else{
+                          echo '<a href="index.php?act=bill"><input disabled type="submit" value="Xác nhận đặt hàng"></a>
+                          <a href="index.php?act=delcart"><input disabled type="button" value="Xóa giỏ hàng"></a>';
+                        }
+                      
+                      ?>
+                      
                       
                       
                     </div>

@@ -2,54 +2,7 @@
             <div class="boxtrai mr">
                 <div class="row mb">
                 <div class="row">
-                    <div class="banner mb">
-                        <!-- auto slider start  -->
-                        <div class="img-slider">
-                            <div class="slide active">
-                              <img src="view/images/1.jpg" alt="">
-                              <div class="info">
-                                <h2>HAT FISHERMAN</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                            </div>
-                            <div class="slide">
-                              <img src="view/images/2.jpg" alt="">
-                              <div class="info">
-                                <h2>ACHES DIA</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                            </div>
-                            <div class="slide">
-                              <img src="view/images/3.jpg" alt="">
-                              <div class="info">
-                                <h2>COLOR S32</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                            </div>
-                            <div class="slide">
-                              <img src="view/images/4.jpg" alt="">
-                              <div class="info">
-                                <h2>IMP XIAOMI</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                            </div>
-                            <div class="slide">
-                              <img src="view/images/5.jpg" alt="">
-                              <div class="info">
-                                <h2>HAVANA</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                              </div>
-                            </div>
-                            <div class="navigation">
-                              <div class="btn active"></div>
-                              <div class="btn"></div>
-                              <div class="btn"></div>
-                              <div class="btn"></div>
-                              <div class="btn"></div>
-                            </div>
-                          </div>
-                        <!-- auto slider end -->
-                    </div>
+                    
                 </div>
                     <div class="boxtitle sptheodm">SẢN PHẨM <?=$tendm?></div>
                     <div class="row boxcontent">
@@ -77,6 +30,7 @@
                                             <input type="hidden" name="namesp" value="'.$namesp.'">
                                             <input type="hidden" name="img" value="'.$img.'">
                                             <input type="hidden" name="price" value="'.$price.'">
+                                            <input type="hidden" name="soluong" value="1">
                                             <input type="submit" name="addtocartbtn" value="Add to cart">
                                         </form>
                                     </div>
