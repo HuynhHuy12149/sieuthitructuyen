@@ -28,7 +28,7 @@
               </div>
               <div class="input-box">
                 <span class="details">Phone number</span>
-                <input type="text" name="phone" placeholder="Enter your password" required>
+                <input type="text" class = "mobilenumber"  name="phone" placeholder="Enter your password" required>
               </div>
               <div class="row mb10 g-recaptcha" data-sitekey="6LcF3isjAAAAAJimApsuC7_yMbkSH9AMs-fnfbKG"></div>
               
@@ -54,7 +54,7 @@
               </div>
             </div> -->
             <div class="button">
-              <input type="submit" name="dangky" value="Register">
+              <input type="submit" onclick="check_number()" name="dangky" value="Register">
             </div>
           </form>
           <h4 class="thongbao" style="color:red;">

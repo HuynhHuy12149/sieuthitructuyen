@@ -88,8 +88,18 @@
                     $email = $_POST['email'];
                     $address = $_POST['address'];
                     $phone = $_POST['phone'];
-                    insert_taikhoandk($user, $pass ,$fullname, $email, $address,$phone);
-                    $thongbao="Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng.";
+                    $dodai = strlen($phone);
+                    $u = check_email($email);
+                    if($dodai != 10){
+                        $thongbao = "Số điện thoại không quá 10 chữ số";
+                    }else if(is_array($u)){
+                        $thongbao = "Tài khoản đã tồn tại";
+                    }
+                    else{
+                        insert_taikhoandk($user, $pass ,$fullname, $email, $address,$phone);
+                        $thongbao="Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng.";
+                    }
+                    
                 }else{
                     $thongbao="Không đăng ký được vui lòng thử lại";
                 }
